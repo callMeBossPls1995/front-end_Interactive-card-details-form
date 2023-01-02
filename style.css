@@ -1,0 +1,278 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+img {
+  width: 100%;
+}
+
+body {
+  font-family: "Space Grotesk";
+}
+
+.title {
+  font-size: 2.4rem;
+}
+
+.content {
+  font-size: 1.3rem;
+}
+
+label {
+  font-size: 1.3rem;
+}
+
+button {
+  display: block;
+  width: 100%;
+  padding: 0.8em 1em;
+  font-weight: 500;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+}
+
+:root {
+  --color-primary: hsl(278, 68%, 11%);
+  --color-outline-input: hsl(278, 68%, 11%);
+}
+
+.button-primary {
+  background: var(--color-primary);
+  color: #fff;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #333;
+  padding: 1rem;
+  padding-bottom: 3rem;
+}
+
+.container {
+  width: 90%;
+  height: 450px;
+  max-width: 800px;
+  margin: auto;
+  display: flex;
+  background: #fff;
+  border-radius: 5px;
+}
+
+.top {
+  width: 35%;
+  height: 100%;
+  background: red;
+  background-image: url(./images/bg-main-desktop.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.bottom {
+  width: 70%;
+  background: #fff;
+  overflow: hidden;
+  display: flex;
+  justify-content: end;
+  padding-right: 13rem;
+  align-items: center;
+}
+
+.bottom > div {
+  width: 40%;
+  min-width: 200px;
+}
+
+.bottom form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.bottom form > div {
+  width: 100%;
+  margin-bottom: 0.7rem;
+}
+
+form .double {
+  display: flex;
+  margin-bottom: 4rem;
+}
+
+input {
+  font-size: 0.8rem;
+}
+.double input {
+  width: 40%;
+}
+
+.double > div:nth-child(2) input {
+  width: 100%;
+}
+
+form button {
+  margin-top: 2rem;
+}
+
+form input {
+  width: 100%;
+  border-radius: 3px;
+  border: none;
+  border: 1px solid hsl(270, 3%, 87%);
+  padding: 0.6em 0.5em;
+  color: rgba(156, 156, 156, 0.544);
+  font-family: inherit;
+  font-size: 1rem;
+  letter-spacing: 1px;
+}
+
+form label {
+  color: hsl(279, 6%, 55%);
+  font-weight: 500;
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 0.6rem;
+}
+
+.card {
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 10px;
+  width: 250px;
+  height: 135px;
+  box-shadow: -10px 5px 15px rgba(0, 0, 0, 0.3);
+  position: absolute;
+  padding: 1rem;
+}
+
+.card-back {
+  background-image: url(./images/bg-card-back.png);
+  top: 20%;
+  left: 50%;
+}
+
+.card-front {
+  background-image: url(./images/bg-card-front.png);
+  top: 55%;
+  left: 20%;
+}
+
+/*  */
+
+#cvc {
+  position: absolute;
+  top: 45%;
+  left: 80%;
+  color: #fff;
+}
+
+.card-front {
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.card-front > div:first-child {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+}
+
+#card-number {
+  position: absolute;
+  bottom: 30%;
+  left: 10%;
+  width: 80%;
+  font-size: 1.4rem;
+  letter-spacing: 2px;
+}
+
+#name {
+  position: absolute;
+  bottom: 10%;
+  left: 10%;
+}
+
+#expired-day {
+  position: absolute;
+  right: 10%;
+  bottom: 10%;
+  transform: translateX(-50%);
+  letter-spacing: 2px;
+}
+
+.error {
+  display: inline-block;
+  min-width: 30px;
+  color: red;
+  font-style: italic;
+  font-size: 1rem;
+  margin: 0.3rem 0;
+}
+
+.error-input {
+  border-color: red;
+}
+
+@media (max-width: 780px) {
+  body {
+  }
+
+  .container {
+    margin: auto;
+    flex-direction: column;
+    width: 350px;
+    height: 100%;
+
+    overflow: hidden;
+  }
+
+  .top {
+    width: 100%;
+    height: 45%;
+  }
+
+  .bottom {
+    width: 100%;
+    padding: 1rem 0;
+  }
+
+  .card {
+    min-width: unset;
+  }
+
+  .card-back {
+    top: 10%;
+    left: 80px;
+  }
+
+  .card-front {
+    top: 45%;
+    left: 25px;
+  }
+
+  .bottom {
+    width: 100%;
+    height: 100%;
+    padding-top: 9rem;
+  }
+
+  .bottom > div {
+    width: 80%;
+    height: 100%;
+    margin: auto;
+  }
+}
